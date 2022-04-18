@@ -1,7 +1,7 @@
 //import {Button} from "./components";
 import {Routes,Route, Navigate} from "react-router-dom";
 import {MainLayOut} from "./layouts";
-import {AboutPage, HomePage, NotFoundPage, PostPage, SinglePostPage, UserPage} from "./pages";
+import {AboutPage, HomePage, NotFoundPage, PostPage, SinglePostPage, SingleUserPage, UserPage} from "./pages";
 
 
 function App() {
@@ -10,7 +10,9 @@ function App() {
         <Route path={'/'} element={<MainLayOut/>}>
             <Route index element={<Navigate to={'home'}/>} />
             <Route path={'home'} element={<HomePage/>}/>
-            <Route path={'users'} element={<UserPage/>}/>
+            <Route path={'users'} element={<UserPage/>}>
+                <Route path={':id'} element={<SingleUserPage/>}/>
+            </Route>
             <Route path={'posts'} element={<PostPage/>}>
                 <Route path={':id'} element={<SinglePostPage/>}/>
             </Route>
