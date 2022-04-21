@@ -1,5 +1,6 @@
 
 import {useReducer} from "react";
+import {useLocation} from "react-router-dom";
 
 const initialState = 0;
 const reducer = (state, action)=>{
@@ -16,6 +17,7 @@ const reducer = (state, action)=>{
 }
 
 const CountOne = () => {
+
     const [count, dispatch] = useReducer(reducer, initialState);
     return (
         <div>
