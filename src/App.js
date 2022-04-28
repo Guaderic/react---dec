@@ -1,13 +1,32 @@
-
+import {Cats, CatsForm, Counter, Dogs, DogsForm, Users} from "./components";
+import {Form} from "./components/Form";
+import './App.css'
 
 
 function App() {
-  return (
-      <Routes>
+    return (
+        <div>
+            {/*<Counter/>*/}
+            {/*<Form/>*/}
+            {/*<Users/>*/}
 
+            <div className={'flex'}>
 
-        </Routes>
-  );
+                <DogsForm/>
+                <CatsForm/>
+
+            </div>
+
+            <hr/>
+
+            <div className={'flex'}>
+
+                <Dogs/>
+                <Cats/>
+
+            </div>
+        </div>
+    );
 }
 
 export default App;
