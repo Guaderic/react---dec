@@ -1,12 +1,13 @@
-
+import {CarForm, Cars} from "./components";
 
 
 function App() {
   return (
-      <Routes>
-
-
-        </Routes>
+    <div>
+        <CarForm/>
+        <hr/>
+        <Cars/>
+    </div>
   );
 }
 
