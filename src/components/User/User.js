@@ -1,10 +1,12 @@
 const User = ({user}) => {
-const {name, position, photo, email} = user
+const { position, photo } = user
 
     return (
         <div>
                 <div>
-                    <img src="" alt=""/>
+                    <img src={photo} alt={position}/>
+
+                    <h2>{position}</h2>
                     
                 </div>
         </div>

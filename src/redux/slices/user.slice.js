@@ -9,7 +9,7 @@ const getAll = createAsyncThunk(
     'userSlice/getAll',
     async ()=>{
         const {data} = await userService.getAll();
-        return data
+        return data.users
     }
 );
 
@@ -18,14 +18,15 @@ const userSlice = createSlice({
     name:'userSlice',
     reducers:{},
     extraReducers:{
-        [getAll.fulfilled]:{
+        [getAll.fulfilled]:(state , action)=>{
+            state.users = action.payload
 
         }
     }
 
 });
 
-const {reducer: usersReducer, actions:{}} = userSlice;
+const {reducer: usersReducer, actions} = userSlice;
 
 const usersActions = {
         getAll
