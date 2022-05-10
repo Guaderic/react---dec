@@ -13,6 +13,7 @@ const getAll = createAsyncThunk(
     async () => {
         const {data} = await carService.getAll()
         return data
+        //return data
     }
 );
 
