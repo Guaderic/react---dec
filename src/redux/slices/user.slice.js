@@ -7,9 +7,9 @@ const initialState = {
 
 const getAll = createAsyncThunk(
     'userSlice/getAll',
-    async ()=>{
-        const {data} = await userService.getAll();
-        return data.users
+    async ({page})=>{
+        const {data} = await userService.getAll(page);
+        return data
     }
 );
 
